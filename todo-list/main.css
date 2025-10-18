@@ -1,0 +1,80 @@
+:root{
+    --gray : #333;
+    --green : #4bae4f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conainer{
+    background-color: var(--gray);
+    height: 100vh;
+    padding: 10px;
+}
+.todo-list{
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px ;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.tittle img{
+    width: 30px;
+    margin-left: 6px;
+}
+.tittle {
+    display: flex;
+    margin-bottom:10px ;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.row input{
+    background-color: #edeef0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 80%;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.add-btn{
+    border: none;
+    background-color: #4bae4f;
+    padding: 12px 30px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ul li{
+    list-style: none;
+    font-size: 25px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+ul li span{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 8px;
+    top: 12px;
+    background: url(../todo-list/imegs/unchecked-15.png)center/cover;
+    cursor: pointer;
+}
+ul li.checked::before{
+    background: url(../todo-list/imegs/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711429.jpg)center/cover;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
